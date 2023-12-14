@@ -1,3 +1,9 @@
+import java.util.Arrays;
+
+import ordenadores.Ordenador;
+import ordenadores.OrdenarPorContagemSimples;
+import ordenadores.OrdenarQuick;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello World!");
@@ -7,6 +13,22 @@ public class Main {
         for (int j = 0; j < array.length; j++) {
             System.out.println(array[j]);
         }
+        System.out.println("Ordenar contagem simples:\n");
+        int[] array2 = {4, 2, 7, 1, 5, 3};
+        System.out.println("Array original: " + Arrays.toString(array2));
+
+        Ordenador ordenador = new OrdenarPorContagemSimples();
+        ordenador.ordene(array2);
+        System.out.println("Array ordenado: " + Arrays.toString(array2));
+        System.out.println("Ordenar Particiona:\n");
+        int[] array3 = {4, 7, 2, 1, 5, 3};
+
+        System.out.println("Array original: " + Arrays.toString(array3));
+
+        Ordenador ordenador2 = new OrdenarQuick();
+        ordenador2.ordene(array3);
+
+        System.out.println("Array ordenado: " + Arrays.toString(array3));
     }
 
 
